@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1 
+  number: 2 
   skip: True  # [win or py3k]
 
 requirements:
@@ -20,7 +20,7 @@ requirements:
     - python
     - toolchain
     - scons 2.*
-    - boost 1.65.1
+    - boost 1.66.0
 
 test:
   commands:
