@@ -12,15 +12,17 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2 
+  number: 2
   skip: True  # [win or py3k]
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
-    - toolchain
     - scons 2.*
-    - boost 1.66.0
+    - boost
 
 test:
   commands:
