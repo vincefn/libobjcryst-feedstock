@@ -10,9 +10,11 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/diffpy/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - avoid-comparison-of-pointer-and-int.patch
 
 build:
-  number: 2
+  number: 1002
   skip: True  # [win or py3k]
 
 requirements:
