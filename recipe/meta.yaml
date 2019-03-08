@@ -1,6 +1,6 @@
 {% set name = "libobjcryst" %}
-{% set version = "2017.1.1" %}
-{% set sha256 = "605710be928274a0a73efeda0bf76a8a32c8f5fcedce27b25fd96a6cc67fcf26" %}
+{% set version = "2017.2.1" %}
+{% set sha256 = "d42755da7f4dc5236a9515286e4b6fa7184becb0afe7222554b5906f689ae0de" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
     - avoid-comparison-of-pointer-and-int.patch
 
 build:
-  number: 1002
+  number: 0
   skip: True  # [win or py3k]
 
 requirements:
