@@ -23,7 +23,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
-    - scons 2.*
+    - scons
     - boost
 
 test:
