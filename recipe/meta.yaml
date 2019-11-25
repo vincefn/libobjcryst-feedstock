@@ -13,7 +13,7 @@ source:
 
 build:
   number: 1
-  skip: True  # [win or py3k]
+  skip: True  # [win]
   run_exports:
     - {{ pin_subpackage('libobjcryst', max_pin='x.x') }}
 
@@ -21,10 +21,9 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-  host:
-    - python
     - scons
-    - boost
+  host:
+    - libboost
 
 test:
   commands:
@@ -50,5 +49,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - CJ-Wright
     - pavoljuhas
