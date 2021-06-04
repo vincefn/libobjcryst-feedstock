@@ -1,6 +1,6 @@
 {% set name = "libobjcryst" %}
-{% set version = "2017.2.2" %}
-{% set sha256 = "ad57f4667f6d0b8f0de67a01ecda8e4e09fd0317bf2e0866a4a987b48201583c" %}
+{% set version = "2021.1.1" %}
+{% set sha256 = "ff63c4277df2188f8f2017da4797096db1fe21e6d2b2ca9289a9708b92c60f96" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 1
   skip: True  # [win]
   run_exports:
     - {{ pin_subpackage('libobjcryst', max_pin='x.x') }}
@@ -34,7 +34,7 @@ about:
   license: GPL2
   license_family: GPL
   license_file: LICENSE.txt
-  summary: 'ObjCryst++ packaged for installation as a shared library.'
+  summary: ObjCryst++ packaged for installation as a shared library.
 
   description: |
     ObjCryst++ is Object-Oriented Crystallographic Library for C++ developed
