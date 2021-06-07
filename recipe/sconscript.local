@@ -1,8 +1,5 @@
 # Customize scons build environment.
-import os
-
-# add variable env
-env = Environment(ENV = {'PATH' : os.environ['PATH']})
+Import('env')
 
 # Apply environment settings for Anaconda compilers
 env.Replace(CXX=os.environ['CXX'])
