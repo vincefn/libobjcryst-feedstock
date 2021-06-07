@@ -1,5 +1,8 @@
 # Customize scons build environment.
+
 Import('env')
+
+import os
 
 # Apply environment settings for Anaconda compilers
 env.Replace(CXX=os.environ['CXX'])
@@ -11,3 +14,5 @@ env.MergeFlags(os.environ['LDFLAGS'])
 # Use the default c++98 language standard
 cxxflags98 = [f for f in env['CXXFLAGS'] if not f.startswith('-std=')]
 env.Replace(CXXFLAGS=cxxflags98)
+
+# vim: ft=python
