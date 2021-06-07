@@ -16,4 +16,4 @@ cxxflags98 = [f for f in env['CXXFLAGS'] if not f.startswith('-std=')]
 env.Replace(CXXFLAGS=cxxflags98)
 
 # Install
-env.Install(target=os.environ['PREFIX'], source=['.'])
+env.Install(target="{}/lib".format(os.environ['PREFIX']))
