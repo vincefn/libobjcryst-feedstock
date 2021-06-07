@@ -2,7 +2,7 @@
 import os
 
 # add variable env
-env = Environment(ENV=os.environ)
+env = Environment(ENV = {'PATH' : os.environ['PATH']})
 
 # Apply environment settings for Anaconda compilers
 env.Replace(CXX=os.environ['CXX'])
