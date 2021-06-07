@@ -3,6 +3,7 @@ import os
 
 # add variable env
 env = Environment(ENV = {'PATH' : os.environ['PATH']})
+env.SConscript(dirs=["{}/src".format(os.environ["SRC_DIR"]]), exports='env')
 
 # Apply environment settings for Anaconda compilers
 env.Replace(CXX=os.environ['CXX'])
