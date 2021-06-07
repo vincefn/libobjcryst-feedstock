@@ -12,6 +12,7 @@ echo "List the directory before build:"
 ls .
 
 scons -j $MYNCPU
+scons install prefix=$PREFIX
 
 echo "List the directory after build:"
 ls .
