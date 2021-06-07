@@ -8,9 +8,12 @@ cp ${RECIPE_DIR}/SConstruct ./
 
 echo "Here is the directory before build"
 ls $SRC_DIR
+echo "Here is what in the src directory before build"
+ls $SRC_DIR/src
 
-scons -j $MYNCPU
-scons install
+scons -j $MYNCPU $SRC_DIR/src
 
 echo "Here is the directory after build"
 ls $SRC_DIR
+echo "Here is what in the src directory before build"
+ls $SRC_DIR/src
