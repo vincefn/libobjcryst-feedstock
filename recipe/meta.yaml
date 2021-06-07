@@ -1,6 +1,6 @@
 {% set name = "libobjcryst" %}
 {% set version = "2021.1.1" %}
-{% set sha256 = "ff63c4277df2188f8f2017da4797096db1fe21e6d2b2ca9289a9708b92c60f96" %}
+{% set sha256 = "33ab42731bda1efd346b1870e7216f0dae96ade34fcfb466419e09e0ac1046f1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/diffpy/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/diffpy/{{ name }}/archive/refs/tags/v{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
