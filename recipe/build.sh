@@ -12,3 +12,4 @@ tree .
 scons -j $MYNCPU
 
 echo "Here is the directory after build"
+tree .
