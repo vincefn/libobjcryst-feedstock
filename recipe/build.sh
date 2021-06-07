@@ -7,4 +7,3 @@ MYNCPU=$(( (CPU_COUNT > 8) ? 8 : CPU_COUNT ))
 cp ${RECIPE_DIR}/SConstruct ./
 
 scons -j $MYNCPU
-scons install prefix=$PREFIX
