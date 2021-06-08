@@ -10,11 +10,7 @@ MYNCPU=$(( (CPU_COUNT > 8) ? 8 : CPU_COUNT ))
 if [ $build_platform = "osx-64" ]
 then
   echo "Use conda compiler."
-  export CFLAGS="-i sysroot ${CONDA_BUILD_SYSROOT}"
-  export CCFLAGS="-i sysroot ${CONDA_BUILD_SYSROOT}"
-  export CPPFLAGS="-i sysroot ${CONDA_BUILD_SYSROOT}"
-  export CXXFLAGS="-i sysroot ${CONDA_BUILD_SYSROOT}"
-  export LINKFLAGS="-i sysroot ${CONDA_BUILD_SYSROOT}"
+  export CXXFLAGS="${CXXFLAGS} -isysroot ${CONDA_BUILD_SYSROOT}"
 fi
 
 # apply customizations in sconscript.local
