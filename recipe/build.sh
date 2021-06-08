@@ -21,7 +21,7 @@ cp ${RECIPE_DIR}/sconscript.local ./
 echo "List the directory before build:"
 ls .
 
-scons -j $MYNCPU --diskcheck=none
+scons -j $MYNCPU
 scons install prefix=$PREFIX
 
 echo "List the directory after build:"
