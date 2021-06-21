@@ -1,6 +1,6 @@
 {% set name = "libobjcryst" %}
 {% set version = "2021.1.1" %}
-{% set sha256 = "33ab42731bda1efd346b1870e7216f0dae96ade34fcfb466419e09e0ac1046f1" %}
+{% set sha256 = "bf76ede2c9692bbf085c0957fc6a769981359516106544c3c04914bc29a91d36" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win]
   run_exports:
     - {{ pin_subpackage('libobjcryst', max_pin='x.x') }}
