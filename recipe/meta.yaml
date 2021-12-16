@@ -31,7 +31,7 @@ test:
 
 about:
   home: https://github.com/diffpy/libobjcryst/
-  license: GPL2
+  license: GPL-2.0-only
   license_family: GPL
   license_file: LICENSE.txt
   summary: ObjCryst++ packaged for installation as a shared library.
