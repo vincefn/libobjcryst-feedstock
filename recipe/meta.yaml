@@ -23,7 +23,7 @@ requirements:
     - {{ compiler('cxx') }}
     - scons
   host:
-    - libboost
+    - boost
 
 test:
   commands:
