@@ -3,7 +3,7 @@ About libobjcryst
 
 Home: https://github.com/diffpy/libobjcryst/
 
-Package license: GPL2
+Package license: GPL-2.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libobjcryst-feedstock/blob/master/LICENSE.txt)
 
