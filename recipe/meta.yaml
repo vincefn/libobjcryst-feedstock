@@ -1,6 +1,6 @@
 {% set name = "libobjcryst" %}
-{% set version = "2021.1.1" %}
-{% set sha256 = "bf76ede2c9692bbf085c0957fc6a769981359516106544c3c04914bc29a91d36" %}
+{% set version = "2021.1.2" %}
+{% set sha256 = "7f4d2c7e42154bbc780032ce7efe303b57a14d566b9b52fad8c6754a53b1365d" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
-  skip: True  # [win]
+  number: 0
+  skip: true  # [win]
   run_exports:
     - {{ pin_subpackage('libobjcryst', max_pin='x.x') }}
 
@@ -23,7 +23,7 @@ requirements:
     - {{ compiler('cxx') }}
     - scons
   host:
-    - libboost
+    - boost
 
 test:
   commands:
@@ -31,7 +31,7 @@ test:
 
 about:
   home: https://github.com/diffpy/libobjcryst/
-  license: GPL2
+  license: GPL-2.0-only
   license_family: GPL
   license_file: LICENSE.txt
   summary: ObjCryst++ packaged for installation as a shared library.
