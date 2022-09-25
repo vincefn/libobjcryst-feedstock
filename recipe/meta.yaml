@@ -1,6 +1,6 @@
 {% set name = "libobjcryst" %}
-{% set version = "2021.1.2" %}
-{% set sha256 = "7f4d2c7e42154bbc780032ce7efe303b57a14d566b9b52fad8c6754a53b1365d" %}
+{% set version = "2022.1" %}
+{% set sha256 = "6ddafff9981cf7205589f5268a4b9b56828bd2ce2eee7accbdc5e4f51a324285" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
-  skip: true  # [win]
+  number: 0
   run_exports:
     - {{ pin_subpackage('libobjcryst', max_pin='x.x') }}
 
@@ -22,12 +21,14 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - scons
-  host:
     - boost
 
 test:
   commands:
-    - test -f $PREFIX/lib/libObjCryst${SHLIB_EXT}
+    - test -f $PREFIX/lib/libObjCryst${SHLIB_EXT}             # [not win]
+    - test -f $PREFIX/include/ObjCryst/version.h              # [not win]
+    - if not exist %LIBRARY_LIB%\\libObjCryst.lib exit 1      # [win]
+    - if not exist %LIBRARY_INC%\\ObjCryst\\version.h exit 1  # [win]
 
 about:
   home: https://github.com/diffpy/libobjcryst/
