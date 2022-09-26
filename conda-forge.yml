@@ -1,9 +1,11 @@
-conda_forge_output_validation: true
+build_platform:
+  osx_arm64: osx_64
 channels:
-  # sources selects the channels to pull packages from, in order.
   sources:
   - conda-forge
   - anaconda
+conda_forge_output_validation: true
 github:
   branch_name: main
   tooling_branch_name: main
+test: native_and_emulated
