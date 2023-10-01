@@ -1,6 +1,5 @@
 {% set name = "libobjcryst" %}
 {% set version = "2022.1.4" %}
-{% set sha256 = "163405df27dbe69dd35241529dd2ac13638051314309282fadab6b76859ad527" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/diffpy/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: ce49897e15ef0d37be2df1d42cedbb387ff3c8830a3094cc91512f0de38d1745
 
 build:
   number: 1
@@ -21,7 +20,6 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - scons
-    - libboost-python-devel
   host:
     - libboost-python-devel
 
