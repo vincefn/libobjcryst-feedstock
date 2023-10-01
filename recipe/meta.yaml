@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('libobjcryst', max_pin='x.x') }}
 
@@ -21,9 +21,9 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - scons
-    - boost
+    - libboost-python-devel
   host:
-    - boost
+    - libboost-python-devel
 
 test:
   commands:
