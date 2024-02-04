@@ -1,5 +1,5 @@
 {% set name = "libobjcryst" %}
-{% set version = "2022.1.4" %}
+{% set version = "2024.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/diffpy/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: ce49897e15ef0d37be2df1d42cedbb387ff3c8830a3094cc91512f0de38d1745
+  sha256: 78d95f88751e7e772fe0a16332b371e99baab2a593919e12809ffbf38b3bd2e0
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage('libobjcryst', max_pin='x.x') }}
 
