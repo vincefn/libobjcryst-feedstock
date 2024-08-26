@@ -11,13 +11,14 @@ source:
   sha256: 93799365d7b69a60ffab43f967732167c177334abac97828ce5c848cdb2add1b
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('libobjcryst', max_pin='x.x') }}
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - scons
   host:
