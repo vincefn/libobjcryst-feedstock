@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/diffpy/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 93799365d7b69a60ffab43f967732167c177334abac97828ce5c848cdb2add1b
+  sha256: 0ae1e61c86fbf890ec818d910b1383110f78bb62a75148fa2d702e888e6aef49
 
 build:
   number: 1
