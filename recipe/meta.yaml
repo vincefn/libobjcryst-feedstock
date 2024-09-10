@@ -30,18 +30,18 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/lib/libObjCryst${SHLIB_EXT}                       # [not win]
-    - test -f $PREFIX/include/ObjCryst/version.h                        # [not win]
-    - test -f $PREFIX/include/ObjCryst/CrystVector/CrystVector.h        # [not win]
-    - test -f $PREFIX/include/ObjCryst/ObjCryst/Crystal.h               # [not win]
-    - test -f $PREFIX/include/ObjCryst/Quirks/VFNDebug.h                # [not win]
-    - test -f $PREFIX/include/ObjCryst/RefinableObj/RefinableObj.h      # [not win]
-    - if not exist %LIBRARY_LIB%\\libObjCryst.lib exit 1                # [win]
-    - if not exist %LIBRARY_INC%\\ObjCryst\\version.h exit 1            # [win]
-    - if not exist %LIBRARY_INC%\\CrystVector\\CrystVector.h exit 1     # [win]
-    - if not exist %LIBRARY_INC%\\ObjCryst\\Crystal.h exit 1            # [win]
-    - if not exist %LIBRARY_INC%\\Quirks\\VFNDebug.h exit 1             # [win]
-    - if not exist %LIBRARY_INC%\\RefinableObj\\RefinableObj.h exit 1   # [win]
+    - test -f $PREFIX/lib/libObjCryst${SHLIB_EXT}                                 # [not win]
+    - test -f $PREFIX/include/ObjCryst/version.h                                  # [not win]
+    - test -f $PREFIX/include/ObjCryst/CrystVector/CrystVector.h                  # [not win]
+    - test -f $PREFIX/include/ObjCryst/ObjCryst/Crystal.h                         # [not win]
+    - test -f $PREFIX/include/ObjCryst/Quirks/VFNDebug.h                          # [not win]
+    - test -f $PREFIX/include/ObjCryst/RefinableObj/RefinableObj.h                # [not win]
+    - if not exist %LIBRARY_LIB%\\libObjCryst.lib exit 1                          # [win]
+    - if not exist %LIBRARY_INC%\\ObjCryst\\version.h exit 1                      # [win]
+    - if not exist %LIBRARY_INC%\\ObjCryst\\CrystVector\\CrystVector.h exit 1     # [win]
+    - if not exist %LIBRARY_INC%\\ObjCryst\\ObjCryst\\Crystal.h exit 1            # [win]
+    - if not exist %LIBRARY_INC%\\ObjCryst\\Quirks\\VFNDebug.h exit 1             # [win]
+    - if not exist %LIBRARY_INC%\\ObjCryst\\RefinableObj\\RefinableObj.h exit 1   # [win]
 
 about:
   home: https://github.com/diffpy/libobjcryst/
