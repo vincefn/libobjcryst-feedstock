@@ -7,7 +7,9 @@ package:
 
 source:
   git_url: https://github.com/diffpy/libobjcryst.git
-  git_rev: 2b63b02c39d85be51a8b6f84eb30ce8c3eebc0c8
+  git_rev: v2024.2.1
+  git_depth: 20
+# We need the objcryst submodule, so prefer using a git source
 #  fn: {{ name }}-{{ version }}.tar.gz
 #  url: https://github.com/diffpy/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
 #  sha256: 3878a127cd939a1025e95a90713b59d85213eeb5cc6882a493d4670b0e81bc48
@@ -28,18 +30,18 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/lib/libObjCryst${SHLIB_EXT}                     # [not win]
-    - test -f $PREFIX/include/ObjCryst/version.h                      # [not win]
-    - test -f $PREFIX/include/ObjCryst/CrystVector/CrystVector.h      # [not win]
-    - test -f $PREFIX/include/ObjCryst/ObjCryst/Crystal.h             # [not win]
-    - test -f $PREFIX/include/ObjCryst/Quirks/VFNDebug.h              # [not win]
-    - test -f $PREFIX/include/ObjCryst/RefinableObj/RefinableObj.h    # [not win]
-    - if not exist %LIBRARY_LIB%\\libObjCryst.lib exit 1              # [win]
-    - if not exist %LIBRARY_INC%\\ObjCryst\\version.h exit 1          # [win]
-    - if not exist %LIBRARY_INC%\\CrystVector\\CrystVector.h exit 1   # [win]
-    - if not exist %LIBRARY_INC%\\ObjCryst\\Crystal.h exit 1          # [win]
-    - if not exist %LIBRARY_INC%\\Quirks\\VFNDebug.h exit 1           # [win]
-    - if not exist %LIBRARY_INC%\\RefinableObj\\RefinableObj.h exit 1 # [win]
+    - test -f $PREFIX/lib/libObjCryst${SHLIB_EXT}                       # [not win]
+    - test -f $PREFIX/include/ObjCryst/version.h                        # [not win]
+    - test -f $PREFIX/include/ObjCryst/CrystVector/CrystVector.h        # [not win]
+    - test -f $PREFIX/include/ObjCryst/ObjCryst/Crystal.h               # [not win]
+    - test -f $PREFIX/include/ObjCryst/Quirks/VFNDebug.h                # [not win]
+    - test -f $PREFIX/include/ObjCryst/RefinableObj/RefinableObj.h      # [not win]
+    - if not exist %LIBRARY_LIB%\\libObjCryst.lib exit 1                # [win]
+    - if not exist %LIBRARY_INC%\\ObjCryst\\version.h exit 1            # [win]
+    - if not exist %LIBRARY_INC%\\CrystVector\\CrystVector.h exit 1     # [win]
+    - if not exist %LIBRARY_INC%\\ObjCryst\\Crystal.h exit 1            # [win]
+    - if not exist %LIBRARY_INC%\\Quirks\\VFNDebug.h exit 1             # [win]
+    - if not exist %LIBRARY_INC%\\RefinableObj\\RefinableObj.h exit 1   # [win]
 
 about:
   home: https://github.com/diffpy/libobjcryst/
