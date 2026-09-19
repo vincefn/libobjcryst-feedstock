@@ -1,4 +1,4 @@
-{% set version = "2026.2.0" %}
+{% set version = "2026.3.0" %}
 
 package:
   name: libobjcryst
@@ -6,7 +6,7 @@ package:
 
 source:
   - git_url: https://github.com/diffpy/libobjcryst.git
-  - git_rev: v2026.2.0
+  - git_rev: v2026.3.0
   - git_depth: 20
 # (we need a git submodule, so prefer git)
 # Other method using two tarballs:
